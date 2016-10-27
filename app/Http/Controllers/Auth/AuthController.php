@@ -20,7 +20,7 @@ class AuthController extends Controller {
       |
      */
 
-    protected $redirectTo = '/';
+    protected $redirectTo = 'home';
 
     use AuthenticatesAndRegistersUsers,
         ThrottlesLogins;

@@ -26,15 +26,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Laravel</a>
+                    <a class="navbar-brand" href="/">Laravel</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    @if (!Auth::guest())
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="{{url('home')}}">Home</a></li>
                     </ul>
+                    @endif
                     <ul class="nav navbar-nav navbar-right">
                         @if (Auth::guest())
-                        <li><a href="{{route('auth/login')}}">Login</a></li>
+                        <li><a href="{{url('auth/login')}}">Login</a></li>
+                        <li><a href="{{url('auth/login2')}}">Login (Manual)</a></li>
                         <li><a href="{{route('auth/register')}}">Register</a></li>
                         @else
                         <li>

@@ -15,8 +15,13 @@
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" id="email" value="{{ old('name') }}" class="form-control">
+                            <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <input type="radio" name="active" value="1" checked>Activo<br>
+                            <input type="radio" name="active" value="0" >Inactivo 
+                        </div>
+
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" name="password" id="password" value="{{ old('name') }}" class="form-control">
